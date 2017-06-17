@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/telno"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="휴대폰"
+        android:inputType="textPersonName|phone"
+        android:saveEnabled="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="138dp"
+        android:layout_height="128dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="53dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_call"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <FrameLayout
+        android:layout_width="337dp"
+        android:layout_height="245dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintHorizontal_bias="0.516">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/certLayout"
+            android:layout_width="340dp"
+            android:layout_height="179dp"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="352dp">
+
+            <TextView
+                android:id="@+id/resultview"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/timer"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certno"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certno"
+                app:layout_constraintVertical_bias="0.236" />
+
+            <Button
+                android:id="@+id/retryBtn"
+                android:layout_width="88dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="-3dp"
+                android:layout_marginTop="16dp"
+                android:text="재전송"
+                app:layout_constraintLeft_toRightOf="@+id/certBtn"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/certBtn"
+                android:layout_width="88dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="인증하기"
+                app:layout_constraintLeft_toRightOf="@+id/certno"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/certno"
+                android:layout_width="151dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="인증번호"
+                android:inputType="textPersonName"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/send1"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="138dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="인증하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telno"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

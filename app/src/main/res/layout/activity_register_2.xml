@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="155dp"
+        android:layout_height="99dp"
+        app:srcCompat="@android:drawable/ic_menu_info_details"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+    <EditText
+        android:id="@+id/userid"
+        android:layout_width="256dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="text"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/userpw"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/nowresult"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:id="@+id/idCheckBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="중복확인"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/userid"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/usernm"
+        android:layout_width="191dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="성명"
+        android:inputType="textPersonName"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/userpw"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="340dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="e-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernm" />
+
+    <Button
+        android:id="@+id/send2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="다음"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/userBirthBtn"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.285" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/usernm"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/userpw"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <CheckedTextView
+            android:id="@+id/usermale"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:autoText="false"
+            android:checked="false"
+            android:text="남"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <CheckedTextView
+            android:id="@+id/userFemale"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:text="여"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/userBirthBtn"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:text="생년월일"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="29dp"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
+        app:layout_constraintHorizontal_bias="0.285" />
+
+    <TextView
+        android:id="@+id/nowresult"
+        android:layout_width="256dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userid" />
+
+</android.support.constraint.ConstraintLayout>
